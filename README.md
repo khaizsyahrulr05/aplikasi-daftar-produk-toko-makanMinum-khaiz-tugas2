@@ -27,11 +27,13 @@ Aplikasi desktop sederhana untuk mencatat daftar produk toko, dibuat dengan netb
 4. selesai
 
 ## Lampiran gambar
-<img width="1917" height="987" alt="image" src="https://github.com/user-attachments/assets/4dd2b095-72e5-4b09-ac03-f537b4646de9" />
-<img width="1917" height="536" alt="image" src="https://github.com/user-attachments/assets/0f12eb25-e11b-4419-911f-2c01b5df3b34" />
-<img width="1916" height="990" alt="image" src="https://github.com/user-attachments/assets/da0d224f-92d8-462c-9697-ee787bee0144" />
-<img width="1912" height="958" alt="image" src="https://github.com/user-attachments/assets/b96a6ba2-c57a-4715-9efc-2ae1d16fe0f6" />
-<img width="1915" height="966" alt="image" src="https://github.com/user-attachments/assets/144949af-5f74-48eb-b3b0-787416aad4f5" />
+<img width="1917" height="1000" alt="image" src="https://github.com/user-attachments/assets/d0b00052-a187-4846-9705-9826eb21e7db" />
+<img width="1917" height="966" alt="image" src="https://github.com/user-attachments/assets/aae16bda-4fbd-4407-bd2a-77709d4ba5d3" />
+<img width="1917" height="995" alt="image" src="https://github.com/user-attachments/assets/98ff8464-dd3a-4768-a565-8f9f947ad2e3" />
+<img width="1917" height="958" alt="image" src="https://github.com/user-attachments/assets/506092d3-2652-433c-bbe9-c30824a9b482" />
+<img width="1917" height="1012" alt="image" src="https://github.com/user-attachments/assets/a56ae336-09a6-4c49-8ba8-2972d5df1b7f" />
+
+
 
 
 
