@@ -14,7 +14,7 @@ public class DataProduk {
     }
 
     public Produk tambah(String nama, String kategori, long harga, String gambarUri) {
-        Produk p = new Produk(String.format("PR%03d", urutan), nama, kategori, harga, gambarUri);
+        Produk p = new Produk(String.format("produk%03d", urutan), nama, kategori, harga, gambarUri);
         daftar.add(p);
         urutan++;
         return p;
