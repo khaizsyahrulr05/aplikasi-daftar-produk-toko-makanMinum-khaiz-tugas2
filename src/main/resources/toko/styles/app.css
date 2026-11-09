@@ -1,12 +1,15 @@
 .root {
     -fx-font-family: "SansSerif";
     -fx-font-size: 14px;
-    -fx-background-color: #f4f7fb;
+    -fx-background-color: #eff6ff;
 }
 .header {
     -fx-padding: 20 24;
-    -fx-background-color: white;
+    -fx-background-color: linear-gradient(to right, #1d4ed8, #0ea5e9);
     -fx-alignment: center-left;
+}
+.header .title {
+    -fx-text-fill: white;
 }
 .page {
     -fx-padding: 24;
@@ -15,15 +18,19 @@
     -fx-background-color: white;
     -fx-background-radius: 14;
     -fx-padding: 24;
+    -fx-border-color: #fdba74;
+    -fx-border-radius: 14;
+    -fx-border-width: 2;
 }
 .title {
     -fx-font-size: 25px;
     -fx-font-weight: bold;
-    -fx-text-fill: #18334d;
+    -fx-text-fill: #1e3a8a;
 }
 .subtitle {
     -fx-font-size: 19px;
     -fx-font-weight: bold;
+    -fx-text-fill: #ea580c;
 }
 .muted {
     -fx-text-fill: #64748b;
@@ -32,30 +39,32 @@
 .error {
     -fx-text-fill: #b91c1c;
 }
+.success {
+    -fx-text-fill: #15803d;
+}
 .button {
     -fx-padding: 10 16;
     -fx-background-radius: 8;
     -fx-cursor: hand;
 }
 .button-primary {
-    -fx-background-color: #2563eb;
+    -fx-background-color: #f97316;
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 .button-primary:hover {
-    -fx-background-color: #1d4ed8;
+    -fx-background-color: #ea580c;
 }
 .text-field, .combo-box {
     -fx-background-radius: 7;
     -fx-padding: 9;
+    -fx-border-color: #93c5fd;
+    -fx-border-radius: 7;
 }
 .scroll-pane, .scroll-pane > .viewport {
     -fx-background-color: transparent;
 }
 .table-view {
     -fx-background-color: white;
-    -fx-border-color: #e2e8f0;
-}
-.success {
-    -fx-text-fill: #15803d;
+    -fx-border-color: #fdba74;
 }

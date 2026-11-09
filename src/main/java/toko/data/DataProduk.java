@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import toko.model.Produk;
 
+
 public class DataProduk {
 
     private final ObservableList<Produk> daftar = FXCollections.observableArrayList();
