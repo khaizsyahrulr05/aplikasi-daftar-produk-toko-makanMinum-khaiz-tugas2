@@ -19,11 +19,11 @@
                     <VBox spacing="12" styleClass="card">
                         <Label text="Tambah produk baru" styleClass="subtitle"/>
                         <Label text="Nama produk"/>
-                        <TextField fx:id="namaField" promptText="Contoh: Nasi Goreng"/>
+                        <TextField fx:id="namaField" promptText="Contoh: Kopi golda"/>
                         <Label text="Kategori"/>
                         <ComboBox fx:id="kategoriBox" maxWidth="Infinity"/>
                         <Label text="Harga (Rp)"/>
-                        <TextField fx:id="hargaField" promptText="Contoh: 15000"/>
+                        <TextField fx:id="hargaField" promptText="Contoh: 5000"/>
                         <Label text="Gambar (opsional)"/>
                         <ImageView fx:id="gambarView" fitWidth="160" fitHeight="160" preserveRatio="true"/>
                         <HBox spacing="10">
