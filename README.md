@@ -33,7 +33,8 @@ Aplikasi desktop sederhana untuk mencatat daftar produk toko, dibuat dengan netb
 <img width="1917" height="958" alt="image" src="https://github.com/user-attachments/assets/506092d3-2652-433c-bbe9-c30824a9b482" />
 <img width="1917" height="1012" alt="image" src="https://github.com/user-attachments/assets/a56ae336-09a6-4c49-8ba8-2972d5df1b7f" />
 
-
+## Klarifikasi:
+Pada CSS menggunakan bantuan ai untuk mempercantik desain tampilan
 
 
 
