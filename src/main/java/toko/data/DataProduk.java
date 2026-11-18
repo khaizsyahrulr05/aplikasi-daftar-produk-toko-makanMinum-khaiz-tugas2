@@ -20,4 +20,7 @@ public class DataProduk {
         urutan++;
         return p;
     }
+        public void hapus(Produk produk) {
+        daftar.remove(produk);
+    }
 }

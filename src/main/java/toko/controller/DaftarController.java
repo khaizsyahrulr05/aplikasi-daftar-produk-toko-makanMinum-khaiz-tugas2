@@ -16,6 +16,8 @@ import javafx.scene.image.ImageView;
 import toko.Navigator;
 import toko.data.DataProduk;
 import toko.model.Produk;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 public class DaftarController {
 
@@ -117,6 +119,23 @@ public class DaftarController {
         } catch (IOException e) {
             pesanLabel.setText("Detail gagal dibuka.");
             e.printStackTrace();
+        }
+    }
+        @FXML
+    private void hapus() {
+        Produk produk = tabel.getSelectionModel().getSelectedItem();
+        if (produk == null) {
+            pesanLabel.setText("Pilih satu produk dulu");
+            return;
+        }
+        Alert dialog = new Alert(Alert.AlertType.CONFIRMATION,
+                "Hapus " + produk.getNama() + "?",
+                ButtonType.YES, ButtonType.NO);
+        dialog.initOwner(tabel.getScene().getWindow());
+        ButtonType jawaban = dialog.showAndWait().orElse(ButtonType.NO);
+        if (jawaban == ButtonType.YES) {
+            data.hapus(produk);
+            cari();
         }
     }
 }
