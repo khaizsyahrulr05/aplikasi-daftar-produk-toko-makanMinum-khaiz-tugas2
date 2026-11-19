@@ -40,11 +40,18 @@ public class Navigator {
         stage.show();
     }
 
-    public void bukaForm() throws IOException {
+        public void bukaForm() throws IOException {
+        bukaForm(null);   // null = mode tambah
+    }
+
+    public void bukaForm(Produk produkDiubah) throws IOException {
         FXMLLoader l = loader("form");
         Parent root = l.load();
         FormController c = l.getController();
         c.setKonteks(this, data);
+        if (produkDiubah != null) {
+            c.setProduk(produkDiubah);   // mode ubah: isi form dengan data produk
+        }
         tampil(root);
     }
 

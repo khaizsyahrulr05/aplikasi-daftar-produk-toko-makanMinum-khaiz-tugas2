@@ -11,6 +11,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import toko.Navigator;
 import toko.data.DataProduk;
+import javafx.scene.control.Button;
+import toko.model.Produk;
 
 public class FormController {
 
@@ -27,7 +29,8 @@ public class FormController {
 
     private Navigator navigator;
     private DataProduk data;
-    private String gambarUri;   // alamat gambar yang dipilih (null = belum ada)
+    private String gambarUri;
+    private Produk produkDiubah; 
 
     @FXML
     private void initialize() {
@@ -38,6 +41,18 @@ public class FormController {
     public void setKonteks(Navigator navigator, DataProduk data) {
         this.navigator = navigator;
         this.data = data;
+    }
+        public void setProduk(Produk produk) {
+        produkDiubah = produk;
+        judulLabel.setText("Ubah produk " + produk.getKode());
+        simpanButton.setText("Simpan Perubahan");
+        namaField.setText(produk.getNama());
+        kategoriBox.setValue(produk.getKategori());
+        hargaField.setText(String.valueOf(produk.getHarga()));
+        gambarUri = produk.getGambarUri();
+        if (gambarUri != null) {
+            gambarView.setImage(new Image(gambarUri, 160, 160, true, true));
+        }
     }
 
     @FXML
@@ -73,7 +88,11 @@ public class FormController {
     private void simpan() {
         try {
             long harga = Long.parseLong(hargaField.getText().trim());
-            data.tambah(namaField.getText(), kategoriBox.getValue(), harga, gambarUri);
+            if (produkDiubah == null) {
+                data.tambah(namaField.getText(), kategoriBox.getValue(), harga, gambarUri);
+            } else {
+                data.ubah(produkDiubah, namaField.getText(), kategoriBox.getValue(), harga, gambarUri);
+}
         } catch (NumberFormatException e) {
             tampilPesan("Harga harus berupa bilangan bulat.", true);
             return;
@@ -81,6 +100,10 @@ public class FormController {
             tampilPesan(e.getMessage(), true);
             return;
         }
+        if (produkDiubah != null) {
+            bukaDaftar(); 
+            return;
+}
         namaField.clear();
         hargaField.clear();
         kategoriBox.setValue("Makanan");
@@ -97,6 +120,11 @@ public class FormController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private Label judulLabel;
+    
+    @FXML
+    private Button simpanButton;
 
     private void tampilPesan(String teks, boolean error) {
         pesanLabel.getStyleClass().setAll("label", error ? "error" : "success");

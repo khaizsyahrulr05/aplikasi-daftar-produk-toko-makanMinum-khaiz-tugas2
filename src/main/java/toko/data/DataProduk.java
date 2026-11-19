@@ -23,4 +23,13 @@ public class DataProduk {
         public void hapus(Produk produk) {
         daftar.remove(produk);
     }
+            public Produk ubah(Produk lama, String nama, String kategori, long harga, String gambarUri) {
+        int posisi = daftar.indexOf(lama);
+        if (posisi < 0) {
+            throw new IllegalArgumentException("Produk tidak ditemukan");
+        }
+        Produk baru = new Produk(lama.getKode(), nama, kategori, harga, gambarUri);
+        daftar.set(posisi, baru);
+        return baru;
+    }
 }

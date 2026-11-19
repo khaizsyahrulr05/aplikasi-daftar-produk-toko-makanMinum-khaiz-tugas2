@@ -138,4 +138,18 @@ public class DaftarController {
             cari();
         }
     }
+        @FXML
+    private void ubah() {
+        Produk produk = tabel.getSelectionModel().getSelectedItem();
+        if (produk == null) {
+            pesanLabel.setText("Pilih satu produk dahulu.");
+            return;
+        }
+        try {
+            navigator.bukaForm(produk);   // buka form dalam mode ubah
+        } catch (IOException e) {
+            pesanLabel.setText("Form gagal dibuka.");
+            e.printStackTrace();
+        }
+    }
 }
